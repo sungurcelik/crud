@@ -12,7 +12,7 @@ code {
     monospace;
 }
 
-.delete-modal {
+.modal-wrapperr {
   background-color: rgba(128, 128, 128, 0.51);
   position: fixed;
   top: 0;
@@ -25,7 +25,7 @@ code {
   z-index: 999;
 }
 
-.modal-inner {
+.modall {
   background-color: white;
   padding: 70px;
   border-radius: 10px;

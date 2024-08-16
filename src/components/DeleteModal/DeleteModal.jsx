@@ -1,15 +1,21 @@
-export const DeleteModal = ({ setShowDeleteModal }) => {
+export const DeleteModal = ({
+  setShowDeleteModal,
+  handleDelete,
+  bookTitle,
+}) => {
   return (
-    <div className="delete-modal">
-      <div className="modal-inner">
-        <h5>Silmek İstiyor Musunuz?</h5>
+    <div className="modal-wrapperr">
+      <div className="modall">
+        <h5>{bookTitle} Kitabını Silmek İstiyor Musunuz?</h5>
         <button
           onClick={() => setShowDeleteModal(false)}
           className="btn btn-warning"
         >
           Vazgeç
         </button>
-        <button className="btn btn-danger">Onayla</button>
+        <button onClick={() => handleDelete()} className="btn btn-danger">
+          Onayla
+        </button>
       </div>
     </div>
   );

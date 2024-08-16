@@ -1,4 +1,9 @@
-export const BookCard = ({ bookInfo, handleModal }) => {
+export const BookCard = ({
+  bookInfo,
+  handleModal,
+  handleEditModal,
+  handleRead,
+}) => {
   const { title, date, isRead, id } = bookInfo;
 
   return (
@@ -14,11 +19,22 @@ export const BookCard = ({ bookInfo, handleModal }) => {
         <p>{date}</p>
       </div>
       <div className="btn-group">
-        <button onClick={() => handleModal(id)} className="btn btn-danger">
+        <button
+          onClick={() => handleModal(id, title)}
+          className="btn btn-danger"
+        >
           Sil
         </button>
-        <button className="btn btn-primary">Düzenle</button>
-        <button className="btn btn-success">
+        <button
+          onClick={() => handleEditModal(bookInfo)}
+          className="btn btn-primary"
+        >
+          Düzenle
+        </button>
+        <button
+          onClick={() => handleRead(bookInfo)}
+          className="btn btn-success"
+        >
           {isRead ? "Okundu" : "Okunmadı"}
         </button>
       </div>
